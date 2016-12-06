@@ -1,54 +1,54 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.sandbox.springmvc</groupId>
-	<artifactId>sandbox-model</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
-	<name>sandbox model</name>
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.sandbox.springmvc</groupId>
+  <artifactId>sandbox-model</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>sandbox model</name>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<springframework.version>4.3.1.RELEASE</springframework.version>
-		<jackson.version>2.7.5</jackson.version>
-		<version.org.apache.maven.plugins.maven-war-plugin>2.4</version.org.apache.maven.plugins.maven-war-plugin>
-		<version.org.apache.maven.plugins.maven-compiler-plugin>3.2</version.org.apache.maven.plugins.maven-compiler-plugin>
-		<version.javax.servlet.javax.servlet-api>3.1.0</version.javax.servlet.javax.servlet-api>
-		<version.javax.servlet.jstl>1.2</version.javax.servlet.jstl>
-		<version.javax.javaee-api>6.0</version.javax.javaee-api>
-		<version.org.hibernate.hibernate-core>4.1.4.Final</version.org.hibernate.hibernate-core>
-		<version.junit.junit>4.12</version.junit.junit>
-	</properties>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <springframework.version>4.3.1.RELEASE</springframework.version>
+    <jackson.version>2.7.5</jackson.version>
+    <version.org.apache.maven.plugins.maven-war-plugin>2.4</version.org.apache.maven.plugins.maven-war-plugin>
+    <version.org.apache.maven.plugins.maven-compiler-plugin>3.2</version.org.apache.maven.plugins.maven-compiler-plugin>
+    <version.javax.servlet.javax.servlet-api>3.1.0</version.javax.servlet.javax.servlet-api>
+    <version.javax.servlet.jstl>1.2</version.javax.servlet.jstl>
+    <version.javax.javaee-api>6.0</version.javax.javaee-api>
+    <version.org.hibernate.hibernate-core>4.1.4.Final</version.org.hibernate.hibernate-core>
+    <version.junit.junit>4.12</version.junit.junit>
+  </properties>
 
-	<repositories>
-		<repository>
-			<id>JBoss repository</id>
-			<url>http://repository.jboss.com/maven2/</url>
-		</repository>
-	</repositories>
+  <repositories>
+    <repository>
+      <id>JBoss repository</id>
+      <url>http://repository.jboss.com/maven2/</url>
+    </repository>
+  </repositories>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.apache.geronimo.specs</groupId>
-			<artifactId>geronimo-jpa_2.0_spec</artifactId>
-			<version>1.0</version>
-			<scope>provided</scope>
-		</dependency>
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-jpa_2.0_spec</artifactId>
+      <version>1.0</version>
+      <scope>provided</scope>
+    </dependency>
 
-	</dependencies>
+  </dependencies>
 
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>${version.org.apache.maven.plugins.maven-compiler-plugin}</version>
-				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
-				</configuration>
-			</plugin>
-		</plugins>
-		<finalName>${project.artifactId}</finalName>
-	</build>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${version.org.apache.maven.plugins.maven-compiler-plugin}</version>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+      </plugin>
+    </plugins>
+    <finalName>${project.artifactId}</finalName>
+  </build>
 </project>
