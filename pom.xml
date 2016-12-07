@@ -6,36 +6,31 @@
   <version>1.0.0-SNAPSHOT</version>
   <name>sandbox model</name>
 
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.sandbox.springmvc</groupId>
+        <artifactId>sandbox-springmvc4.3-hibernate4-angularjs1.4-bom</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <springframework.version>4.3.1.RELEASE</springframework.version>
-    <jackson.version>2.7.5</jackson.version>
-    <version.org.apache.maven.plugins.maven-war-plugin>2.4</version.org.apache.maven.plugins.maven-war-plugin>
     <version.org.apache.maven.plugins.maven-compiler-plugin>3.2</version.org.apache.maven.plugins.maven-compiler-plugin>
-    <version.javax.servlet.javax.servlet-api>3.1.0</version.javax.servlet.javax.servlet-api>
-    <version.javax.servlet.jstl>1.2</version.javax.servlet.jstl>
-    <version.javax.javaee-api>6.0</version.javax.javaee-api>
-    <version.org.hibernate.hibernate-core>4.1.4.Final</version.org.hibernate.hibernate-core>
-    <version.junit.junit>4.12</version.junit.junit>
+    <version.org.apache.maven.plugins.maven-compiler-plugin.source>1.7</version.org.apache.maven.plugins.maven-compiler-plugin.source>
+    <version.org.apache.maven.plugins.maven-compiler-plugin.target>1.7</version.org.apache.maven.plugins.maven-compiler-plugin.target>
   </properties>
-
-  <repositories>
-    <repository>
-      <id>JBoss repository</id>
-      <url>http://repository.jboss.com/maven2/</url>
-    </repository>
-  </repositories>
 
   <dependencies>
     <dependency>
-      <groupId>org.apache.geronimo.specs</groupId>
-      <artifactId>geronimo-jpa_2.0_spec</artifactId>
-      <version>1.0</version>
-      <scope>provided</scope>
+      <groupId>org.hibernate.javax.persistence</groupId>
+      <artifactId>hibernate-jpa-2.0-api</artifactId>
     </dependency>
-
   </dependencies>
-
 
   <build>
     <plugins>
@@ -44,8 +39,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>${version.org.apache.maven.plugins.maven-compiler-plugin}</version>
         <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
+          <source>${version.org.apache.maven.plugins.maven-compiler-plugin.source}</source>
+          <target>${version.org.apache.maven.plugins.maven-compiler-plugin.target}</target>
         </configuration>
       </plugin>
     </plugins>
